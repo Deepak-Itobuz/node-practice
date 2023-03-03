@@ -6,7 +6,7 @@ function getWeatherData(loc){
             tempF: '88.0',
 
             condition: {
-                Text: 'Mist',
+                text: 'Mist',
                 humidity: '43',
                 feelsLikeC: '30.7',
                 feelsLikeF: '87.2'
@@ -19,7 +19,7 @@ function getWeatherData(loc){
             tempF: '39.2',
 
             condition: {
-                Text: 'Overcast',
+                text: 'Overcast',
                 humidity: '75',
                 feelsLikeC: '1.2',
                 feelsLikeF: '34.2'
@@ -32,7 +32,7 @@ function getWeatherData(loc){
             tempF: '25.9',
 
             condition: {
-                Text: 'Clear',
+                text: 'Clear',
                 humidity: '67',
                 feelsLikeC: '-8.4',
                 feelsLikeF: '16.9'
@@ -45,7 +45,7 @@ function getWeatherData(loc){
             tempF: '68.0',
 
             condition: {
-                Text: 'Clear',
+                text: 'Clear',
                 humidity: '26',
                 feelsLikeC: '20.0',
                 feelsLikeF: '68.0'
@@ -58,7 +58,7 @@ function getWeatherData(loc){
             tempF: '66.2',
 
             condition: {
-                Text: 'Clear',
+                text: 'Clear',
                 humidity: '94',
                 feelsLikeC: '19.0',
                 feelsLikeF: '66.2'
@@ -71,7 +71,7 @@ function getWeatherData(loc){
             tempF: '33.8',
 
             condition: {
-                Text: 'Mist',
+                text: 'Mist',
                 humidity: '93',
                 feelsLikeC: '-2.0',
                 feelsLikeF: '28.5'
@@ -83,7 +83,7 @@ function getWeatherData(loc){
             tempF: '34.7',
 
             condition: {
-                Text: 'Partly cloudy',
+                text: 'Partly cloudy',
                 humidity: '80',
                 feelsLikeC: '-2.8',
                 feelsLikeF: '27.0'
@@ -96,7 +96,7 @@ function getWeatherData(loc){
             tempF: '81.9',
 
             condition: {
-                Text: 'Light rain shower',
+                text: 'Light rain shower',
                 humidity: '77',
                 feelsLikeC: '31.2',
                 feelsLikeF: '88.2'
@@ -109,7 +109,7 @@ function getWeatherData(loc){
             tempF: '77.0',
 
             condition: {
-                Text: 'Moderate rain',
+                text: 'Moderate rain',
                 humidity: '94',
                 feelsLikeC: '27.9',
                 feelsLikeF: '82.2'
@@ -121,7 +121,7 @@ function getWeatherData(loc){
             tempC: '-4',
             tempF: '24.8',
             condition: {
-                Text: 'Partly cloudy',
+                text: 'Partly cloudy',
                 humidity: '86',
                 feelsLikeC: '-5.3',
                 feelsLikeF: '22.5'
@@ -165,7 +165,7 @@ function getWeatherData(loc){
             tempC: '-1',
             tempF: '30.2',
             condition: {
-                Text: 'Light snow showers',
+                text: 'Light snow showers',
                 humidity: '93',
                 feelsLikeC: '-6.1',
                 feelsLikeF: '21.1'
@@ -176,7 +176,7 @@ function getWeatherData(loc){
             tempC: '-9',
             tempF: '15.8',
             condition: {
-                Text: 'Light snow',
+                text: 'Light snow',
                 humidity: '92',
                 feelsLikeC: '-15.5',
                 feelsLikeF: '4.2'
@@ -187,7 +187,7 @@ function getWeatherData(loc){
             tempC: '21',
             tempF: '69.8',
             condition: {
-                Text: 'Partly cloudy',
+                text: 'Partly cloudy',
                 humidity: '35',
                 feelsLikeC: '21',
                 feelsLikeF: '69.8'
@@ -198,7 +198,7 @@ function getWeatherData(loc){
             tempC: '1',
             tempF: '33.8',
             condition: {
-                Text: 'Mist',
+                text: 'Mist',
                 humidity: '93',
                 feelsLikeC: '0.3',
                 feelsLikeF: '32.5'
@@ -209,7 +209,7 @@ function getWeatherData(loc){
             tempC: '4',
             tempF: '39.2',
             condition: {
-                Text: 'Clear',
+                text: 'Clear',
                 humidity: '65',
                 feelsLikeC: '2.1',
                 feelsLikeF: '35.7'
@@ -220,7 +220,7 @@ function getWeatherData(loc){
             tempC: '22.0',
             tempF: '71.6',
             condition: {
-                Text: 'Partly Cloudy',
+                text: 'Partly Cloudy',
                 humidity: '83',
                 feelsLikeC: '24.5',
                 feelsLikeF: '76.2'
@@ -231,7 +231,7 @@ function getWeatherData(loc){
             tempC: '5.6',
             tempF: '71.6',
             condition: {
-                Text: 'Clear',
+                text: 'Clear',
                 humidity: '70',
                 feelsLikeC: '3.9',
                 feelsLikeF: '38.9'
