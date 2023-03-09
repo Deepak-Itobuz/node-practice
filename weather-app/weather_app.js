@@ -1,5 +1,5 @@
 function getWeatherData(loc){
-    const weatherData= [
+ const weatherData= [
         {
             location: 'kolkata',
             tempC: '31.0',
@@ -241,9 +241,13 @@ function getWeatherData(loc){
     ]
 
 
+
     // const result = weatherData[0].location;
     const result = weatherData.find((item)=> item.location.toLowerCase() == loc.toLowerCase());
     console.log( result);
     // return result;
 }
 getWeatherData("Singapore");
+
+
+// module.exports = {weatherData:weatherData}

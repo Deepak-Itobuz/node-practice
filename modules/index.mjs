@@ -1,9 +1,9 @@
 // import * as math from './math.mjs';
 
-import  add from './math.mjs';
+import  add from './math.js';
 
 
-import  {sub} from './math.mjs';
+import  {sub} from './math.js';
 // const math = require("./math");
 
 console.log(add(1,3));
