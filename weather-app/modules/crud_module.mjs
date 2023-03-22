@@ -27,8 +27,6 @@ function write(filename , weatherData){
   });
 }
 
-
-
 const obj = {
   location: "",
   tempC: "",

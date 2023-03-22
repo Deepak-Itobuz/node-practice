@@ -22,11 +22,11 @@ function execute(choice) {
         menu();
         break;
     case "4":
-        renameFolder(args[3], args[4],args[5]="./");
+        renameFolder(args[3], args[4], args[5]="./");
         menu();
         break;
     case "5":
-        createFile(args[3],args[4]="./");
+        createFile(args[3], args[4]="./");
         menu();
         break;
     case "6":
@@ -56,16 +56,16 @@ function getCurrentFilenames() {
   console.log("\n");
 }
 
-function createFolder(fname,pathName) {
-  if (!fs.existsSync(path.join(pathName,fname))) {
-    fs.mkdirSync(path.join(pathName,fname));
+function createFolder(fname, pathName) {
+  if (!fs.existsSync(path.join(pathName, fname))) {
+    fs.mkdirSync(path.join(pathName, fname));
   }
 }
 
 function deleteFolder(fname, pathName) {
-  if (fs.existsSync(path.join(pathName,fname))) {
+  if (fs.existsSync(path.join(pathName, fname))) {
     fs.rm(
-        path.join(pathName,fname),
+        path.join(pathName, fname),
       {
         recursive: true,
       },
@@ -76,21 +76,21 @@ function deleteFolder(fname, pathName) {
   }
 }
 
-function renameFolder(fname, newname , pathName) {
-  if (fs.existsSync(path.join(pathName,fname))) {
-    fs.renameSync(path.join(pathName,fname), path.join(pathName,newname));
+function renameFolder(fname, newname, pathName) {
+  if (fs.existsSync(path.join(pathName, fname))) {
+    fs.renameSync(path.join(pathName, fname), path.join(pathName, newname));
   }
 }
 
 function createFile(fname, pathName) {
-  if (!fs.existsSync(path.join(pathName,fname))) {
-    fs.writeFileSync(path.join(pathName,fname), "");
+  if (!fs.existsSync(path.join(pathName, fname))) {
+    fs.writeFileSync(path.join(pathName, fname), "");
   }
   console.log("File created successfully");
 }
 
 function deleteFile(fname, pathName) {
-  fs.rm(path.join(pathName,fname), { recursive: true }, (err) => {
+  fs.rm(path.join(pathName, fname), { recursive: true }, (err) => {
     if (err) {
       // File deletion failed
       console.error(err.message);
@@ -101,10 +101,10 @@ function deleteFile(fname, pathName) {
 }
 
 function editFile(fname, oldData, newData, pathName) {
-  fs.readFile(path.join(pathName,fname), "utf8", function (err, data) {
+  fs.readFile(path.join(pathName, fname), "utf8", function (err, data) {
     var newValue = data.replace(oldData, newData);
 
-    fs.writeFile(path.join(pathName,fname), newValue, function () {
+    fs.writeFile(path.join(pathName, fname), newValue, function () {
       console.log(newValue);
     });
   });
@@ -131,6 +131,8 @@ function copy(src, dest) {
 if (args.length > 2) {
   execute(args[2]);
 }
+else
+menu();
 
 function menu() {
   console.log("0: list menu");
