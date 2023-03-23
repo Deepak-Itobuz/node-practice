@@ -1,4 +1,3 @@
-// import  url  from 'url';      incase we use parseUrl to get query value
 const fs = require('fs')
 const http = require('http');
 const path = require('path');
@@ -11,13 +10,9 @@ function readDb(filename, format) {
 }
 
 const weatherData = readDb("./database.txt", "utf-8");
-
 const port = 8081;
-
 function getRoutesBasedData(route, data) {
-    let status = 200;
     console.log('route', route);
-
     if (route == '/') {
         return JSON.stringify({
             apiData: data,
@@ -36,13 +31,8 @@ function getRoutesBasedData(route, data) {
     else {
         let loc = route.split("/")[1];
         loc = loc.split("%20").join(" ")
-
-        console.log(loc);
-        //    console.log(typeof (data.find((item) => item.location.toLowerCase() == loc.toLowerCase())));
         for (let i = 0; i < data.length; i++) {
             if (data[i].location.toLowerCase() == loc.toLowerCase()) {
-                console.log(data[i]);
-
                 return JSON.stringify({
                     apiData: data[i],
                     status: 200,

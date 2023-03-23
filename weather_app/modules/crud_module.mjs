@@ -1,10 +1,11 @@
 import * as fs from "fs";
 import path from 'path'
 import { fileURLToPath } from 'node:url';
+import getFileName from "./crud_module_new.mjs";
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename)
 
-let filename = "database.txt";
+let filename = getFileName();
 let format = 'utf8';
 
 function readDb(filename, format) {
@@ -58,14 +59,6 @@ export function read(loc) {
     (item) => item.location.toLowerCase() === loc.toLowerCase()
   );
   return objMain;
-}
-
-export function getData() {
-  const cities = [];
-  for (let i = 0; i < weatherData.length; i++) {
-    cities.push(weatherData[i].location);
-  }
-  console.log(cities);
 }
 
 export function update(loc, tempC, tempF, text) {
