@@ -13,7 +13,7 @@ const weatherData = readDb("./database.txt", "utf-8");
 const port = 8081;
 function getRoutesBasedData(route, data) {
     console.log('route', route);
-    if (route == '/') {
+    if (route === '/') {
         return JSON.stringify({
             apiData: data,
             status: 200,
@@ -21,7 +21,7 @@ function getRoutesBasedData(route, data) {
             message: 'hey i am running ...'
         })
     }
-    else if (route == '/all-cities') {
+    else if (route === '/all-cities') {
         let allCities = [];
         for (let i = 0; i < data.length; i++) {
             allCities.push(data[i].location);
@@ -32,7 +32,7 @@ function getRoutesBasedData(route, data) {
         let loc = route.split("/")[1];
         loc = loc.split("%20").join(" ")
         for (let i = 0; i < data.length; i++) {
-            if (data[i].location.toLowerCase() == loc.toLowerCase()) {
+            if (data[i].location.toLowerCase() === loc.toLowerCase()) {
                 return JSON.stringify({
                     apiData: data[i],
                     status: 200,
