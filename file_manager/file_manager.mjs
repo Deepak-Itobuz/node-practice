@@ -10,41 +10,41 @@ function execute(choice) {
       menu();
       break;
     case "1":
-        createFolder(args[3], args[4]="./");
-        menu();
+      createFolder(args[3], args[4] = "./");
+      menu();
       break;
     case "2":
-        deleteFolder(args[3], args[4]="./");
-        menu();
-        break;
+      deleteFolder(args[3], args[4] = "./");
+      menu();
+      break;
     case "3":
-        getCurrentFilenames(__dirname);
-        menu();
-        break;
+      getCurrentFilenames(__dirname);
+      menu();
+      break;
     case "4":
-        renameFolder(args[3], args[4], args[5]="./");
-        menu();
-        break;
+      renameFolder(args[3], args[4], args[5] = "./");
+      menu();
+      break;
     case "5":
-        createFile(args[3], args[4]="./");
-        menu();
-        break;
+      createFile(args[3], args[4] = "./");
+      menu();
+      break;
     case "6":
-        deleteFile(args[3], args[4]="./");
-        menu();
-        break;
+      deleteFile(args[3], args[4] = "./");
+      menu();
+      break;
     case "7":
-        editFile(args[3], args[4], args[5], args[6]="./");
-        menu();
-        break;
+      editFile(args[3], args[4], args[5], args[6] = "./");
+      menu();
+      break;
     case "8":
-        move(args[3], args[4]);
-        menu();
-        break;
+      move(args[3], args[4]);
+      menu();
+      break;
     case "9":
-        copy(args[3], args[4]);
-        menu();
-        break;
+      copy(args[3], args[4]);
+      menu();
+      break;
   }
 }
 
@@ -65,7 +65,7 @@ function createFolder(fname, pathName) {
 function deleteFolder(fname, pathName) {
   if (fs.existsSync(path.join(pathName, fname))) {
     fs.rm(
-        path.join(pathName, fname),
+      path.join(pathName, fname),
       {
         recursive: true,
       },
@@ -102,8 +102,10 @@ function deleteFile(fname, pathName) {
 
 function editFile(fname, oldData, newData, pathName) {
   fs.readFile(path.join(pathName, fname), "utf8", function (err, data) {
+    if (err) {
+      console.error(err);
+    }
     var newValue = data.replace(oldData, newData);
-
     fs.writeFile(path.join(pathName, fname), newValue, function () {
       console.log(newValue);
     });
@@ -132,17 +134,17 @@ if (args.length > 2) {
   execute(args[2]);
 }
 else
-menu();
+  menu();
 
 function menu() {
   console.log("0: list menu");
-  console.log("1: create folder \t args=(foldername,path)");
-  console.log("2: delete folder \t args=(foldername,path)");
+  console.log("1: create folder \t args=(foldername, path)");
+  console.log("2: delete folder \t args=(foldername, path)");
   console.log("3: list current directory");
-  console.log("4: rename folder \t args=(foldername,newname,path)");
-  console.log("5: create file \t args=(filename,path)");
-  console.log("6: delete file \t args=(filename,path)");
-  console.log("7: edit file \t args=(filename,oldText,newText,path)");
-  console.log("8: move \t args=(src/filename,dest/filename,path)");
-  console.log("9: copy \t args=(src/filename,dest/filename,path)");
+  console.log("4: rename folder \t args=(foldername, newname, path)");
+  console.log("5: create file \t args=(filename, path)");
+  console.log("6: delete file \t args=(filename, path)");
+  console.log("7: edit file \t args=(filename, oldText, newText, path)");
+  console.log("8: move \t args=(src/filename, dest/filename, path)");
+  console.log("9: copy \t args=(src/filename, dest/filename, path)");
 }
