@@ -33,7 +33,6 @@ const obj = {
   },
 };
 
-// add("zamia", 30, 72, "mist"); to add weather details of a location
 export function add(loc, tempC, tempF, text) {
   let data = readDb(filename, format);
   if (
@@ -52,7 +51,7 @@ export function add(loc, tempC, tempF, text) {
   }
 
 }
-// console.log(read("singapore"))  to use read function
+
 export function read(loc) {
   let data = readDb(filename, format);
   let objMain = data.find(
@@ -78,7 +77,6 @@ export function update(loc, tempC, tempF, text) {
     console.log("location not found!");
   }
 }
-// update("kolkata", "74", 70, "none"); use this syntax to update details in the DB
 
 export function deleteObj(loc) {
   let data = readDb(filename, format);
@@ -94,7 +92,7 @@ export function deleteObj(loc) {
     console.log("not found");
   }
 }
-// deleteObj("Kolkata"); use this syntax to delete a location details
+
 
 
 
